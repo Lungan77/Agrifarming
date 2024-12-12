@@ -1,4 +1,6 @@
 from dotenv import load_dotenv
+import pymysql
+pymysql.install_as_MySQLdb()  # This ensures Flask-SQLAlchemy uses PyMySQL
 from data import data
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
